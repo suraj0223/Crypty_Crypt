@@ -1,16 +1,32 @@
-# crypt
+# **Crypty Crypt**
 
-A new Flutter project.
+> Encrypt your image and share it to the world without any fear of spying your image by someone in the middle of the network.
 
-## Getting Started
+## **How it works**
 
-This project is a starting point for a Flutter application.
+- Upload an image from your local storage.
+- Encrypt it, using the application with its most advanced AES encryption algorithm.
+- Go to decrypt screen and then decrypt your original image.
 
-A few resources to get you started if this is your first Flutter project:
+## **Process involved**
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+1. ### **Encryption**
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+    ![encryptionimage](readme_images/encryption_process.png)
+
+2. ### **Decryption**
+
+    ![encryptionimage](readme_images/decryption_process.png)
+
+### **ScreenShots**
+
+![encryptionimage](readme_images/ss1.png)
+![encryptionimage](readme_images/ss2.png)
+![encryptionimage](readme_images/ss3.png)
+![encryptionimage](readme_images/ss4.png)
+
+### **Upcoming Features**
+
+- Share your encrypted image Unique ID with your friend so that he or she can use it for decryption with that ID.
+
+#### *For more detailed explaination how this application works and what the Encryption algorithm used please fell free to explore [documentation](https://docs.google.com/document/d/1LcQ-f0P0VpFhGmUsMcyDEAMhOUOS8luSwR7OIXerPPw/edit#)*
