@@ -15,6 +15,5 @@ jobs:
     - run: flutter pub get
     - run: flutter build apk --debug --split-per-abi
     - name: Push APK to Releases
-      uses: ncipollo/release-action@v1
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
