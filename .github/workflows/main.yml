@@ -1,31 +1,21 @@
 on: push
-runs-on: ubuntu-latest
-  - uses: actions/setup-java@v1
-    with:
-      java-version: '12.x'
-  - uses: subosito/flutter-action@v1
-    with:
-      flutter-version: '2.2'
-
 name: Test, Build and Release apk
 jobs:
-  setUp:
-    name: Setting UP environment
+  build:
+    name: Build APK
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - run: echo "Flutter environment Setup completed..."
-
-  test:
-    name: Testing Environment
-    - run: echo "Initialising test..."
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '2.2'
     - run: flutter pub get
     - run: flutter test
-    - run: echo "Environment setUp correctly..."
-  
-  build:
-    - name: Building Apk
-    - run: echo "Running Build..."
     - run: flutter build apk --debug --split-per-abi
+    - name: Push APK to Releases
       uses: ncipollo/release-action@v1
       with:
         artifacts: "build/app/outputs/apk/debug/*.apk"
